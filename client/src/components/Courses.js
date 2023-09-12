@@ -18,7 +18,7 @@ const Courses = () => {
             })
             .catch(error => {
                 // handle error
-                console.log("Error fetching and parsing data", error);
+                console.log("Error fetching and parsing data in Courses", error);
             })
     }, []);
 
@@ -28,12 +28,12 @@ const Courses = () => {
      */
     return (
         <>
-            {courses.map((course) => {
+            {courses.map((course) => (
                 <Link to={`courses/${course.id}`} className="course--module course--link" key={course.id}>
                     <h2 className="course--label">Course</h2>
                     <h3 className="course--title">{course.title}</h3>
                 </Link>
-            })}
+            ))}
 
             <Link to="create-course.html" className="course--module course--add--module" >
                 <span className="course--add--title">

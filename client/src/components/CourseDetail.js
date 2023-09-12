@@ -19,12 +19,12 @@ const CourseDetail = () => {
             })
             .catch(error => {
                 // handle error
-                console.log("Error fetching and parsing data", error);
+                console.log("Error fetching and parsing data in Course Detail", error);
             })
     }, [courseId]);
 
     return (
-        <main>
+        <>
             <div className="actions--bar">
                 <div className="wrap">
                     <Link to={`course/${course.id}/update`} className="button" href="update-course.html">Update Course</Link>
@@ -58,7 +58,7 @@ const CourseDetail = () => {
                     </div>
                 </form>
             </div>
-        </main>
+        </>
 
     )
 
